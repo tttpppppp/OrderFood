@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/cart"
+        android:title="Cart"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/noti"
+        android:icon="@drawable/notifications"
+        android:title="Notifications"
+        app:showAsAction="ifRoom" />
+</menu>

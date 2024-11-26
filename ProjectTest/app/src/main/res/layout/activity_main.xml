@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/primary"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageshop"
+        android:layout_width="300dp"
+        android:layout_height="281dp"
+        android:src="@drawable/login" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Shopping Cart"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/cartDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Giao hàng tận nơi ,có nhiều ưu đãi!"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+</LinearLayout>
