@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Wrap everything inside a LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Image View for Food -->
+
+            <!-- Text View for Food Name -->
+            <ImageView
+                android:id="@+id/imageViewFood"
+                android:layout_width="match_parent"
+                android:layout_height="227dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textViewFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Food Name"
+                android:fontFamily="@font/montserratextrabold"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- LinearLayout for Free Ship info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Giá: "
+                    android:textColor="#666666"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/textViewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="200.000đ"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:textColor="@color/primary"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textIsFreeShip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Food Free ship"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtdestitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Chi tiết món ăn"
+            android:textColor="#666666"
+            android:paddingStart="10dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtdescontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="12dp"
+            android:text="Burger King - Hương vị đích thực của những chiếc bánh burger chất lượng cao, kết hợp nguyên liệu tươi ngon, dịch vụ nhanh chóng và ưu đãi hấp dẫn. Hãy thưởng thức ngay hôm nay!"
+            android:textColor="#333333"
+            android:background="#EFEFEF"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="@font/montserrat" />
+        <Button
+            android:id="@+id/buttonAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#FF9800"
+            android:layout_gravity="center"
+            android:text="Mua ngay"
+            android:width="400dp"
+            android:textColor="#FFFFFF" />
+        </LinearLayout>
+</ScrollView>

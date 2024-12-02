@@ -3,4 +3,16 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
     </style>
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <!-- Màu chữ nổi bật -->
+        <item name="android:textColor">@color/white</item>
+
+        <!-- Kiểu chữ đậm -->
+        <item name="android:textStyle">bold</item>
+
+        <!-- Kích thước vừa đủ để tạo sự nổi bật -->
+        <item name="android:textSize">24sp</item>
+
+    </style>
+
 </resources>

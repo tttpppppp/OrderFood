@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home">
+    android:padding="0dp"
+    tools:context=".activity.HomeActivity">
 
     <include layout="@layout/appbar" />
 
@@ -23,6 +24,8 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_menu"
         app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         android:background="@color/primary"/>
 
 </LinearLayout>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CartActivity">
+
+    <include layout="@layout/appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:padding="10dp"
+        android:layout_marginBottom="30dp">
+
+        <!-- Cart Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giỏ hàng"
+            android:fontFamily="@font/montserratextrabold"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:textSize="20sp"/>
+
+        <!-- Clear All Button -->
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa tất cả"
+            android:backgroundTint="@color/primary"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Cart Empty Text -->
+    <TextView
+        android:id="@+id/txtcartemty"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:text="Giỏ hàng trống"
+        android:fontFamily="@font/montserratextrabold"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <!-- RecyclerView for Cart Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:layout_weight="1" />
+
+    <!-- Total Price and Checkout Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingTop="16dp">
+
+        <!-- Total Price Text -->
+        <TextView
+            android:id="@+id/textViewTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Tổng Tiền: 0 VND"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Checkout Button -->
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/primary" />
+    </LinearLayout>
+
+</LinearLayout>

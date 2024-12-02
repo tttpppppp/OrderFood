@@ -1,0 +1,119 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Include appbar -->
+        <include
+            layout="@layout/appbar" />
+
+        <!-- Banner Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+            <!-- CardView containing restaurant details -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="70dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/restaurant_image"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/user1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/restaurant_name"
+                            android:fontFamily="@font/montserratextrabold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Restaurant Name"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/restaurant_free_ship"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:text="50% off"
+                                android:textSize="16sp"
+                                android:gravity="start" />
+
+                            <TextView
+                                android:id="@+id/opendate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Opens at 12AM"
+                                android:textSize="16sp"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/restaurant_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Restaurant Description"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/restaurant_rating"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rating: 4.5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <!-- RecyclerView for categories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

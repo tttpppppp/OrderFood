@@ -11,24 +11,26 @@
         android:id="@+id/imageshop"
         android:layout_width="300dp"
         android:layout_height="281dp"
-        android:src="@drawable/login" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Shopping Cart"
+        android:text="Fast Food"
         android:textStyle="bold"
         android:textColor="#ffffff"
-        android:textSize="30sp" />
+        android:fontFamily="@font/montserratbold"
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/cartDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Giao hàng tận nơi ,có nhiều ưu đãi!"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="Thưởng thức vị ngon, tận hưởng cuộc sống"
         android:textColor="#ffffff"
         android:textSize="16sp" />
 </LinearLayout>

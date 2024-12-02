@@ -1,12 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <!-- Main LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="18sp" />
-</LinearLayout>
+        android:orientation="vertical">
+
+        <!-- ViewFlipper -->
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <!-- Title TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Futured restaurant"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp"
+            android:textSize="18sp" />
+
+        <!-- RecyclerView for restaurants -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvRestaurent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- RecyclerView for categories -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="8dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:orientation="horizontal">
+
+            <!-- Image 1 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_2"
+                android:layout_marginEnd="5dp" />
+
+            <!-- Image 2 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_3" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_gravity="bottom">
+
+            <!-- Đường phân cách -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD" />
+
+            <!-- Thông tin liên hệ -->
+            <TextView
+                android:id="@+id/footer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="© 2024 Fast Food | Contact us: support@foodapp.com"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                android:gravity="center" />
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F8F9FA"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_gravity="bottom">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+
+                <!-- Tên ứng dụng -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Fast Food"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <!-- Slogan -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Delicious food at your fingertips"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+
+                <!-- Đường phân cách nhỏ -->
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/primary" />
+
+                <!-- Thông tin bản quyền -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#9E9E9E"
+                    android:text="\u00A9 2024 FoodApp. All rights reserved."
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

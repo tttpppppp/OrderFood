@@ -12,7 +12,7 @@
         android:id="@+id/cart"
         android:icon="@drawable/cart"
         android:title="Cart"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/noti"
