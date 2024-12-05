@@ -28,20 +28,11 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:textColor="@color/black"
+               android:layout_weight="1"
                android:textSize="14sp"
                android:textStyle="bold"
                android:padding="6dp"
                android:text="@string/app_name" />
-           <TextView
-               android:id="@+id/isFreeShip"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textColor="#FF2929"
-               android:textSize="12sp"
-               android:textStyle="bold"
-               android:padding="6dp"
-               android:text="Free" />
-
        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

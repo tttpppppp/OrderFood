@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/white"
+    android:padding="0dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Mã đơn hàng, Ngày đặt hàng, và Tên nhà hàng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <!-- Dòng trên: Mã và Ngày đặt hàng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/txtOrderId"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Mã: #12345"
+                    android:fontFamily="@font/montserratbold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:id="@+id/txtOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01/12/2024"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <!-- Dòng dưới: Tên nhà hàng -->
+            <TextView
+                android:id="@+id/txtNameRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhà hàng: Nhà hàng ABC"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- Tên người nhận -->
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Người nhận: Nguyễn Văn A"
+            android:textSize="14sp"
+            android:paddingBottom="2dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Địa chỉ người nhận -->
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ: 123 Đường ABC, TP.HCM"
+            android:textSize="14sp"
+            android:paddingBottom="2dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Tổng giá (nhấn mạnh) -->
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng giá: 1.000.000 VNĐ"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:paddingTop="4dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -2,8 +2,6 @@ package com.example.projecttest.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Handler;
-import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -13,14 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.projecttest.R;
 import com.example.projecttest.activity.CartActivity;
-import com.example.projecttest.activity.MainActivity;
 import com.example.projecttest.model.GioHang;
 import com.example.projecttest.utils.GioHangManager;
 import com.squareup.picasso.Picasso;
@@ -63,6 +57,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         holder.textViewPrice.setText(formattedPrice);
         holder.edittextquantity.setText(String.valueOf(cartItem.getQuantity()));
         Picasso.get().load(cartItem.getImageUrl()).into(holder.imageViewFood);
+
         holder.buttonRemove.setOnClickListener(v -> {
             gioHangManager.removeFromCart(cartItem.getProductId());
             cartItems.remove(position);
@@ -91,7 +86,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                     double updatedPrice = cartItem.getPrice() * newQuantity;
                     String formattedUpdatedPrice = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"))
                             .format(updatedPrice);
-                    holder.textViewPrice.setText("Giá: " + formattedUpdatedPrice);
+                    holder.textViewPrice.setText(formattedUpdatedPrice);
                     gioHangManager.updateQuantityInCart(cartItem.getProductId(), newQuantity);
                     ((CartActivity) mContext).calculateTotalPrice(cartItems);
                 }

@@ -7,13 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.projecttest.R;
 import com.example.projecttest.activity.FoodDetails;
-import com.example.projecttest.activity.RestaurantDetailActivity;
 import com.example.projecttest.model.Food;
 import com.squareup.picasso.Picasso;
 

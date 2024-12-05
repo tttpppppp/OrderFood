@@ -4,7 +4,6 @@ public class MenuDTO {
     private int foodId;
     private String foodName;
     private String foodImage;
-    private double foodPrice;
     private int isFreeShip;
 
     public String getFoodName() {
@@ -25,14 +24,6 @@ public class MenuDTO {
 
     public int getIsFreeShip() {
         return isFreeShip;
-    }
-
-    public double getFoodPrice() {
-        return foodPrice;
-    }
-
-    public void setFoodPrice(Double foodPrice) {
-        this.foodPrice = foodPrice;
     }
 
     public int getFoodId() {

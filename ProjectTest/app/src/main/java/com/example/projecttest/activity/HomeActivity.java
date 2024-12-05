@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.projecttest.R;
+import com.example.projecttest.fragment.HistoryFragment;
 import com.example.projecttest.fragment.ProfileFragment;
 import com.example.projecttest.fragment.CategoryFragment;
 import com.example.projecttest.fragment.HomeFragment;
@@ -42,6 +43,8 @@ public class HomeActivity extends AppCompatActivity {
                 selectedFragment = new CategoryFragment();
             } else if (item.getItemId() == R.id.nav_profile) {
                 selectedFragment = new ProfileFragment();
+            }else if(item.getItemId() == R.id.nav_history){
+                selectedFragment = new HistoryFragment();
             }
             if (selectedFragment != null) {
                 loadFragment(selectedFragment);

@@ -9,8 +9,10 @@ import com.example.projecttest.model.GioHang;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class GioHangManager {
     private SharedPreferences sharedPreferences;
@@ -79,6 +81,7 @@ public class GioHangManager {
         editor.remove(CART_KEY);
         editor.apply();
     }
+
     public void updateQuantityInCart(int productId, int newQuantity) {
         List<GioHang> cart = getCart();
         for (GioHang item : cart) {
@@ -88,5 +91,17 @@ public class GioHangManager {
             }
         }
         saveCart(cart);
+    }
+
+    public String calculateTotalPrice(List<GioHang> cart) {
+        double totalPrice = 0;
+        if (cart != null && !cart.isEmpty()) {
+            for (GioHang item : cart) {
+                totalPrice += item.getPrice() * item.getQuantity();
+            }
+            String formattedTotalPrice = NumberFormat.getCurrencyInstance(new Locale("vi", "VN")).format(totalPrice);
+            return formattedTotalPrice;
+        }
+        return "";
     }
 }

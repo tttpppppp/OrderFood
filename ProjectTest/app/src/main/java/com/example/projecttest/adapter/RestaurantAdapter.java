@@ -1,7 +1,10 @@
 package com.example.projecttest.adapter;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +18,7 @@ import com.example.projecttest.R;
 import com.example.projecttest.activity.RestaurantDetailActivity;
 import com.example.projecttest.model.Restaurant;
 import com.squareup.picasso.Picasso;
-
+import android.content.SharedPreferences;
 import java.util.List;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
@@ -52,6 +55,12 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(mContext, RestaurantDetailActivity.class);
             intent.putExtra("restaurantId", restaurant.getRestaurantId());
+
+            SharedPreferences sharedPreferences = mContext.getSharedPreferences("RestaurantId", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("restaurantId", restaurant.getRestaurantId());
+            editor.apply();
+
             mContext.startActivity(intent);
         });
     }

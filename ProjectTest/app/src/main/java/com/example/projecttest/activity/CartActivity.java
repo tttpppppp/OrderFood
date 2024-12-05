@@ -7,9 +7,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,16 +50,16 @@ public class CartActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle("Giỏ hàng");
         }
-        // Initialize GioHangManager
+
         gioHangManager = new GioHangManager(this);
         List<GioHang> cart = gioHangManager.getCart();
 
         if (cart.isEmpty()) {
-            recyclerViewCart.setVisibility(View.GONE); // Ẩn RecyclerView
-            txtcartemty.setVisibility(View.VISIBLE); // Hiển thị thông báo giỏ hàng trống
+            recyclerViewCart.setVisibility(View.GONE);
+            txtcartemty.setVisibility(View.VISIBLE);
         } else {
-            recyclerViewCart.setVisibility(View.VISIBLE); // Hiển thị RecyclerView
-            txtcartemty.setVisibility(View.GONE); // Ẩn thông báo giỏ hàng trống
+            recyclerViewCart.setVisibility(View.VISIBLE);
+            txtcartemty.setVisibility(View.GONE);
         }
         // Set up RecyclerView with CartAdapter
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -78,7 +80,13 @@ public class CartActivity extends AppCompatActivity {
 
         // Checkout button listener (currently empty)
         btnCheckout.setOnClickListener(v -> {
-            // Implement checkout functionality here
+           if(!cart.isEmpty()){
+               Intent intent = new Intent(CartActivity.this , OrderActivity.class);
+               startActivity(intent);
+               finish();
+           }else{
+               Toast.makeText(this, "Vui lòng đặt món", Toast.LENGTH_SHORT).show();
+           }
         });
 
         Gson gson = new Gson();

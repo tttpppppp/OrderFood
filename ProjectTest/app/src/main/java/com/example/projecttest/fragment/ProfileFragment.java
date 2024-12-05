@@ -27,8 +27,11 @@ public class ProfileFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPreferences", MODE_PRIVATE);
         int userId = sharedPreferences.getInt("userID", -1);
 
+        SharedPreferences sharedPreferences1 = getActivity().getSharedPreferences("RestaurantId", MODE_PRIVATE);
+        int resId = sharedPreferences1.getInt("restaurantId", -1);
+
         if (userId != -1) {
-            txtUserId.setText("User ID: " + userId);
+            txtUserId.setText("User ID: " + userId + " Res: " + resId);
         } else {
             txtUserId.setText("No User ID found");
         }

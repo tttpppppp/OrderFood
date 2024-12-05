@@ -5,12 +5,27 @@ import java.util.List;
 public class Order {
     private int userId;
     private int restaurantId;
-    private List<Food> listFood;
+    private Shipping shipping;
+    private List<GioHang> foodOrderRequests;
 
-    public Order(int userId, int restaurantId, List<Food> listFood) {
-        this.userId = userId;
-        this.restaurantId = restaurantId;
-        this.listFood = listFood;
+    public Order(){
+
+    }
+
+    public Shipping getShipping() {
+        return shipping;
+    }
+
+    public void setShipping(Shipping shipping) {
+        this.shipping = shipping;
+    }
+
+    public List<GioHang> getFoodOrderRequests() {
+        return foodOrderRequests;
+    }
+
+    public void setFoodOrderRequests(List<GioHang> foodOrderRequests) {
+        this.foodOrderRequests = foodOrderRequests;
     }
 
     public int getUserId() {
@@ -29,11 +44,4 @@ public class Order {
         this.restaurantId = restaurantId;
     }
 
-    public List<Food> getListFood() {
-        return listFood;
-    }
-
-    public void setListFood(List<Food> listFood) {
-        this.listFood = listFood;
-    }
 }

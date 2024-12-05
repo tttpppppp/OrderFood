@@ -1,6 +1,5 @@
 package com.example.project_restaurant.controller;
 
-import com.example.project_restaurant.dto.UserDTO;
 import com.example.project_restaurant.payload.ResponeData;
 import com.example.project_restaurant.payload.request.LoginRequest;
 import com.example.project_restaurant.payload.request.SignUpRequest;
@@ -72,10 +71,9 @@ public class UserController {
     public ResponseEntity<?> loginUser(@RequestBody LoginRequest loginRequest) {
         ResponeData responeData = new ResponeData();
         try {
-            UserDTO user = userService.loginUser(loginRequest);
-            if(user != null){
+            boolean isSuccess = userService.loginUser(loginRequest);
+            if(isSuccess){
                 responeData.setMessage("Login sucesss");
-                responeData.setData(user);
                 return new ResponseEntity<>(responeData , HttpStatus.OK);
             }
             responeData.setMessage("Login fail");

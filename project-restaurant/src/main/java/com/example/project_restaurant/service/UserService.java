@@ -69,13 +69,8 @@ public class UserService implements UserImp {
     }
 
     @Override
-    public UserDTO loginUser(LoginRequest loginRequest) {
+    public boolean loginUser(LoginRequest loginRequest) {
         Users user = userRepository.findByEmailAndPassword(loginRequest.getEmail() , loginRequest.getPassword());
-        if(user != null){
-            UserDTO userDTO = new UserDTO();
-            userDTO.setUserId(user.getUserId());
-            return userDTO;
-        }
-        return null;
+        return user != null;
     }
 }
